@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Database connection
 mongoose
-  .connect(`${config.MONGO_DB}/insuredmine`, {
+  .connect(`${config.MONGO_URI}/insuredmine`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

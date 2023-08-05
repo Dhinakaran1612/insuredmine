@@ -115,9 +115,11 @@ router.post(
       });
 
       // Lob
-      lobList.push({
-        category_name,
-      });
+      const isLobExist = lobList.find((x) => x?.category_name == category_name);
+
+      if (!isLobExist) {
+        lobList.push({ category_name });
+      }
 
       // Policy
       policyList.push({
@@ -149,7 +151,7 @@ router.post(
       });
     }
 
-    // Save details
+    // Save the data into database collections
     await Account.insertMany(accountList);
     await Agent.insertMany(agentList);
     await Carrier.insertMany(carrierList);

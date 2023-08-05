@@ -5,9 +5,9 @@ dotenv.config({
   path: path.resolve(path.normalize(path.join(__dirname, "../..")), `.env`),
 });
 
-const { PORT, MONGO_DB } = process.env;
+const { PORT, MONGO_URI } = process.env;
 
 module.exports = {
   PORT,
-  MONGO_DB,
+  MONGO_URI,
 };
