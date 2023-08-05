@@ -150,11 +150,11 @@ router.post(
     }
 
     // Save details
-    // await Account.insertMany(accountList);
-    // await Agent.insertMany(agentList);
-    // await Carrier.insertMany(carrierList);
-    // await LOB.insertMany(lobList);
-    // await Policy.insertMany(policyList);
+    await Account.insertMany(accountList);
+    await Agent.insertMany(agentList);
+    await Carrier.insertMany(carrierList);
+    await LOB.insertMany(lobList);
+    await Policy.insertMany(policyList);
     await User.insertMany(userList);
     await UserAccount.insertMany(userAccountList);
 
